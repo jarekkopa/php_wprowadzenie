@@ -1,3 +1,3 @@
 <?php
-$x = 4;
+$x = 10;
 echo 'Pomniejszyliśmy wartość zmiennej $x = ' . $x . ' o jeden i otrzymaliśmy ' . --$x . '.';
