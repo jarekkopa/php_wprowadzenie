@@ -6,13 +6,13 @@
  */
 $name = 'Bobik';
 /**
- * Liczba wolnych pokoi w hotelu
+ * Liczba wolnych pokoi w hotelu.
  *
- * @var integer
+ * @var int
  */
 $roomsCounter = 13;
 /**
- * Nazwa zespołu rockowego
+ * Nazwa aktualnego zespołu rockowego.
  *
  * @var string
  */
