@@ -14,6 +14,7 @@ declare(strict_types=1);
 $stringToTest = 'rabbit';
 removeLastLetter($stringToTest);
 appendLetters($stringToTest, 's');
+insertLetters($stringToTest, 'it');
 
 /**
  * Dodanie do tekstu na końcu ciągu znaków.
@@ -43,6 +44,23 @@ function removeLastLetter(string $text): string
 {
     echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
     $text = substr($text, 0, strlen($text) - 1);
+    echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
+
+    return $text;
+}
+
+/**
+ * Dodanie do tekstu na początku ciągu znaków.
+ *
+ * @param string $text Tekst, do którego dodajemy ciąg znaków.
+ * @param string $letters Ciąg znaków do dodania.
+ *
+ * @return string Tekst z dodanymi literami.
+ */
+function insertLetters(string $text, string $letters): string
+{
+    echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
+    $text = $letters . $text;
     echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
 
     return $text;
