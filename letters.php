@@ -14,7 +14,7 @@ declare(strict_types=1);
 $stringToTest = 'rabbit';
 removeLastLetter($stringToTest);
 appendLetters($stringToTest, 's');
-insertLetters($stringToTest, 'it');
+insertLetters($stringToTest, 'my');
 
 /**
  * Dodanie do tekstu na końcu ciągu znaków.
