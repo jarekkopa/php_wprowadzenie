@@ -18,6 +18,7 @@ insertLetters($stringToTest, 'my');
 removeFirstLetter($stringToTest);
 reverseText($stringToTest);
 textUpperCase($stringToTest);
+textLowerCase($stringToTest);
 
 /**
  * Dodanie do tekstu na końcu ciągu znaków.
@@ -106,12 +107,28 @@ function reverseText(string $text): string
  *
  * @param string $text Tekst, w którym zmienimy ciąg znaków na wielkie litery.
  *
- * @return string Tekst po zmianie kolejności.
+ * @return string Tekst po zmianie wielkości.
  */
 function textUpperCase(string $text): string
 {
     echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
     $text = strtoupper($text);
+    echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
+
+    return $text;
+}
+
+/**
+ * Funkcja zamieniająca podany ciąg znaków na małe litery.
+ *
+ * @param string $text Tekst, w którym zmienimy ciąg znaków na małe litery.
+ *
+ * @return string Tekst po zmianie wielkości.
+ */
+function textLowerCase(string $text): string
+{
+    echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
+    $text = strtolower($text);
     echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
 
     return $text;
