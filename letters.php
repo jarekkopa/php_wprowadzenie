@@ -16,6 +16,7 @@ removeLastLetter($stringToTest);
 appendLetters($stringToTest, 's');
 insertLetters($stringToTest, 'my');
 removeFirstLetter($stringToTest);
+reverseText($stringToTest);
 
 /**
  * Dodanie do tekstu na końcu ciągu znaków.
@@ -78,6 +79,22 @@ function removeFirstLetter(string $text): string
 {
     echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
     $text = substr($text, 1, strlen($text) - 1);
+    echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
+
+    return $text;
+}
+
+/**
+ * Funkcja odwracająca kolejność znaków w ciągu.
+ *
+ * @param string $text Tekst, w którym odwracamy kolejność.
+ *
+ * @return string Tekst po odwróceniu kolejności.
+ */
+function reverseText(string $text): string
+{
+    echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
+    $text = strrev($text);
     echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
 
     return $text;
