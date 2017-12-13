@@ -15,6 +15,7 @@ $stringToTest = 'rabbit';
 removeLastLetter($stringToTest);
 appendLetters($stringToTest, 's');
 insertLetters($stringToTest, 'my');
+removeFirstLetter($stringToTest);
 
 /**
  * Dodanie do tekstu na końcu ciągu znaków.
@@ -61,6 +62,22 @@ function insertLetters(string $text, string $letters): string
 {
     echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
     $text = $letters . $text;
+    echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
+
+    return $text;
+}
+
+/**
+ * Usunięcie pierwszej litery z podanego ciągu znaków.
+ *
+ * @param string $text Tekst, z którego usuniemy pierwszą literę.
+ *
+ * @return string Tekst bez pierwszej litery.
+ */
+function removeFirstLetter(string $text): string
+{
+    echo "Before ", __FUNCTION__, ": ", $text, PHP_EOL;
+    $text = substr($text, 1, strlen($text) - 1);
     echo "After ", __FUNCTION__, ": ", $text, PHP_EOL;
 
     return $text;
