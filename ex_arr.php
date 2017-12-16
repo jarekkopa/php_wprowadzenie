@@ -28,3 +28,12 @@ $wartosc = $exArr3{'klucz'};
 var_export($wartosc);
 $wartosc = $exArr4{0};
 var_export($wartosc);
+
+unset($exArr1['klucz']);
+var_export($exArr1);
+unset($exArr1[0]);
+var_export($exArr1);
+unset($exArr1{'klucz'});
+var_export($exArr1);
+unset($exArr1{0});
+var_export($exArr1);
