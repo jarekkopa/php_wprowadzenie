@@ -10,13 +10,13 @@ $weekdays = [
         'sunday' => 'niedziela',
     ],
     'de' => [
-        'montag' => 'poniedziałek',
-        'dienstag'  => 'wtorek',
-        'mittwoch' => 'środa',
-        'donnerstag' => 'czwartek',
-        'freitag' => 'piątek',
-        'samstag' => 'sobota',
-        'sontag' => 'niedziela',
+        'monday' => 'montag',
+        'tuesday'  => 'dienstag',
+        'wednesday' => 'mittwoch',
+        'thusday' => 'donnerstag',
+        'friday' => 'freitag',
+        'saturday' => 'samstag',
+        'sunday' => 'sontag',
     ],
 ];
 var_export($weekdays);
