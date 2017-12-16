@@ -4,6 +4,6 @@ $big = [
         'key' => 'value',
     ],
 ];
-var_export($big);
-$big['smal']['kay'] = 'new_value';
 echo $big['small']['key'];
+unset($big['small']['key']);
+var_export($big);
