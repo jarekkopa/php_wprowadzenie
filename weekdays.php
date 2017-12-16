@@ -19,4 +19,7 @@ $weekdays = [
         'sunday' => 'sontag',
     ],
 ];
-var_export($weekdays);
+$checkWeekday = 'friday';
+echo isset($weekdays['pl'][$checkWeekday]) ? "Jest w jezyku polskim" : 'Nie ma w jezyku polskim', PHP_EOL;
+echo isset($weekdays['de'][$checkWeekday]) ? "Jest w jezyku niemieckim" : 'Nie ma w jezyku niemieckim', PHP_EOL;
+echo isset($weekdays['it'][$checkWeekday]) ? "Jest w jezyku włoskim" : 'Nie ma w jezyku włoskim', PHP_EOL;
