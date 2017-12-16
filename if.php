@@ -1,7 +1,7 @@
 <?php
 
-$a = 5;
+$a = 5 > 2;
 
-if ($a > 2) {
+if ($a) {
     echo 'Pięć jest większe od dwóch';
 }
