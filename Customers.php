@@ -4,4 +4,8 @@ declare(strict_types=1);
 class Customer 
 {
     public $name;
+    public function getDiscount(): int
+    {
+        return 20;
+    }
 }
