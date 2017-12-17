@@ -4,4 +4,5 @@ require_once 'Customers.php';
 
 $customer = new Customer();
 $customer->name = 'Marian';
+echo $customer->getDiscount();
 var_export($customer);
