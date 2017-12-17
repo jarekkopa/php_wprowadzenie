@@ -3,6 +3,6 @@ declare(strict_types=1);
 require_once 'Customers.php';
 
 $customer = new Customer();
-$customer->name = 'Marian';
+$customer->setName('Marian');
 echo $customer->getDiscount();
 var_export($customer);
