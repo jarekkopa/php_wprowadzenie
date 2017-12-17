@@ -6,5 +6,7 @@ ini_set('dispaly_errors', true);
 
 #treść zadania
 const MAX_SLIDES_NUMBER = 99;
-define("MAX_SLIDES_NUMBER", 666);
+if(!defined('MAX_SLIDES_NUMBER')){
+        define("MAX_SLIDES_NUMBER", 666);
+}
 echo "Maksymalna liczba slajdów: ", MAX_SLIDES_NUMBER, PHP_EOL;
