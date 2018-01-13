@@ -3,7 +3,7 @@ declare(strict_types=1);
 //nazwa klasy z wielkiej
 class Customer 
 {
-    private $name;
+    protected $name;
     public function getDiscount(): int
     {
         return 20;
@@ -19,6 +19,6 @@ class Customer
     }
     public function askForDiscount(): void
     {
-        echo "Mógłbym prosić o zniżkę?";
+        echo "Dzie dobry, nazywam sie " . $this->name . ". Mógłbym prosić o zniżkę?";
     }
 }

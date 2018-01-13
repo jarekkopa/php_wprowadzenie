@@ -11,6 +11,6 @@ class ChaoticCustomer extends Customer
     //void stosujemy gdy funckja nic nie zwraca, nie ma return
     public function askForDiscount(): void
     {
-        echo "Gdzie moja zniżka?! Dawaj mi znikę!";
+        echo "Tutaj " . $this->name . ". Gdzie moja zniżka?! Dawaj mi znikę!";
     }
 }
