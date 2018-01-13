@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once 'Customers.php';
 require_once 'ChaoticCustomer.php';
+require_once 'GentleCustomer.php';
 
 $customer = new Customer();
 $customer->setName('Marian');
@@ -15,3 +16,6 @@ $rudolf->setName('Rudolf');
 echo $rudolf->getDiscount(), PHP_EOL;
 echo $rudolf->getName(), PHP_EOL;
 $rudolf->askForDiscount();
+
+$customer2 = new GentleCustomer();
+$customer2->askForDiscount();
