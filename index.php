@@ -19,3 +19,7 @@ $rudolf->askForDiscount();
 
 $customer2 = new GentleCustomer();
 $customer2->askForDiscount();
+
+Customer::getClassName();
+GentleCustomer::getClassName();
+ChaoticCustomer::getClassName();
