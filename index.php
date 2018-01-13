@@ -12,7 +12,7 @@ echo $customer->getDiscount(), PHP_EOL;
 echo $customer->getName(), PHP_EOL;
 echo $customer->askForDiscount(), PHP_EOL;
 
-$rudolf = new ChaoticCustomer();
+$rudolf = CustomerFactory::chooseCustomer('chaotic');
 $rudolf->setName('Rudolf');
 echo $rudolf->getDiscount(), PHP_EOL;
 echo $rudolf->getName(), PHP_EOL;

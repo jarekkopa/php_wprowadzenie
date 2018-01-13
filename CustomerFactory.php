@@ -8,9 +8,16 @@ class CustomerFactory
     //'chaotic'
     public static function chooseCustomer(string $customerType)
     {
-        if ($customerType === 'gentle'){
+        if ($customerType === 'gentle')
+        {
             return new GentleCustomer();
+        }   
+        
+        if($customerType === 'chaotic')
+        {
+            return new ChaoticCustomer();
+        }   
+        
+        return new Customer();
     }
-        return new ChaoticCustomer();
-}
 }
