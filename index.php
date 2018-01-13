@@ -24,3 +24,5 @@ $customer2->askForDiscount();
 Customer::getClassName();
 GentleCustomer::getClassName();
 ChaoticCustomer::getClassName();
+
+$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
