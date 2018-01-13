@@ -4,6 +4,7 @@ declare(strict_types=1);
 require_once 'Customers.php';
 require_once 'ChaoticCustomer.php';
 require_once 'GentleCustomer.php';
+require_once 'CustomerFactory.php';
 
 $customer = new Customer();
 $customer->setName('Marian');
