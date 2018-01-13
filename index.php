@@ -8,4 +8,8 @@ $customer = new Customer();
 $customer->setName('Marian');
 echo $customer->getDiscount();
 echo $customer->getName();
-var_export($customer);
+
+$rudolf = new ChaoticCustomer();
+$rudolf->setName('Rudolf');
+echo $rudolf->getDiscount();
+echo $rudolf->getName();
