@@ -18,4 +18,6 @@ class ChaoticCustomer extends Customer implements CustomerInterface
     {
         echo 'Odnów mi!!';
     }
+
+    
 }

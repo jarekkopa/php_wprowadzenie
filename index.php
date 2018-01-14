@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+require_once 'Invoice.php';
 require_once 'CustomerInterface.php';
 require_once 'Customers.php';
 require_once 'ChaoticCustomer.php';
@@ -45,3 +46,6 @@ var_export($rudolf);
 
 $rudolf->askForRenew(1000);
 var_export($rudolf);
+
+$invoice = $rudolf->askForInvoice(12345);
+var_export($invoice);

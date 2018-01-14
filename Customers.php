@@ -40,9 +40,11 @@ class Customer
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
 
-    public function askForInvoice(int $invoiceId)
+    public function askForInvoice(int $invoiceId): Invoice
     {
-        echo 'Wystawiono fakturę?';
+        $invoice = new Invoice();
+        $invoice->id = $invoiceId;
+        //$invoice->setCustomer($this);
     }
 
     /**
