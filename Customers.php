@@ -3,7 +3,7 @@ declare(strict_types=1);
 //nazwa klasy z wielkiej
 class Customer
 {
-    protected $name;
+    //protected $name;
     public $age;
     /**
      * Status danego Klienta (może być basic lu premium)
@@ -44,4 +44,25 @@ class Customer
     {
         echo 'Wystawiono fakturę?';
     }
+
+    /**
+     * Imię klienta
+     * 
+     * @var string
+     */
+    public $name;
+
+    /**
+     * Nazwisko klienita
+     * 
+     * @var string
+     */
+    public $lastName;
+
+    /**
+     * Numer NIP
+     * 
+     * @var string
+     */
+    public $nip;
 }
