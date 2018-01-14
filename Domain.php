@@ -8,4 +8,9 @@ class Domain extends AbstractProduct
     {
         return 'Zamówienie na domenę złożone';
     }
+
+    public function changeStatus(string $newStatus)
+    {
+        echo "Nie można zmienić statusu domeny";
+    }
 }

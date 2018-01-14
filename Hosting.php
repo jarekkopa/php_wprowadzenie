@@ -8,4 +8,9 @@ class Hosting extends AbstractProduct
     {
         return 'Zamówienie na hosting złożone';
     }
+
+    public function changeStatus(string $newStatus)
+    {
+        echo "Status zmieniony: $newStatus";
+    }
 }
