@@ -11,6 +11,11 @@ class Customer
      * @var string
      */
     public $status = 'basic';
+
+    public function __construct(int $age = 0)
+    {
+        $this->age = $age;
+    }
     
     public function getDiscount(): int
     {
@@ -33,10 +38,5 @@ class Customer
     public static function getClassName(): void
     {
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
-    }
-
-    public function __construct($age = '')
-    {
-        $this->age = $age;
     }
 }
