@@ -10,7 +10,7 @@ class CustomerFactory
     const GENTLE = 'gentle';
     const CHAOTIC = 'chaotic';
 
-    public static function chooseCustomer(string $customerType)
+    public static function chooseCustomer(string $customerType): Customer
     {
         if ($customerType === self::GENTLE)
         {

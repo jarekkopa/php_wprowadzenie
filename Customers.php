@@ -4,6 +4,13 @@ declare(strict_types=1);
 class Customer 
 {
     protected $name;
+    /**
+     * Status danego Klienta (może być basic lu premium)
+     * 
+     * @var string
+     */
+    public $status = 'basic';
+    
     public function getDiscount(): int
     {
         return 20;
