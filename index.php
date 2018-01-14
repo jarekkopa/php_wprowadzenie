@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+require_once 'CustomerInterface.php';
 require_once 'Customers.php';
 require_once 'ChaoticCustomer.php';
 require_once 'GentleCustomer.php';
@@ -40,4 +41,7 @@ var_export($customerAge);
 var_export($customerAgeGengle);
 var_export($customerAgeChaotic);
 
+var_export($rudolf);
+
+$rudolf->askForRenew(1000);
 var_export($rudolf);

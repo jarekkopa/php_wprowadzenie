@@ -8,6 +8,8 @@ abstract class AbstractProduct
 
     abstract function order();
 
+    abstract function changeStatus(string $newStatus);
+
     public function setPrice(int $price)
     {
         $this->price = $price;

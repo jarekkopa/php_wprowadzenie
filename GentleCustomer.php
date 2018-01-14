@@ -17,4 +17,9 @@ class GentleCustomer extends Customer implements CustomerInterface
     {
         echo "Dzie dobry. Mógłbym prosić o zniżkę?";
     }
+
+    public static function askForRenew(int $period)
+    {
+        echo 'Proszę o odnowienie';
+    }
 }

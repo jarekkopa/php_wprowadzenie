@@ -13,4 +13,9 @@ class ChaoticCustomer extends Customer implements CustomerInterface
     {
         echo "Tutaj " . $this->name . ". Gdzie moja zniżka?! Dawaj mi znikę!";
     }
+
+    public static function askForRenew(int $period)
+    {
+        echo 'Odnów mi!!';
+    }
 }
