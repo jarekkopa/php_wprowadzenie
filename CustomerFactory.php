@@ -10,18 +10,20 @@ class CustomerFactory
     const GENTLE = 'gentle';
     const CHAOTIC = 'chaotic';
 
-    public static function chooseCustomer(string $customerType): Customer
+    public static function chooseCustomer(string $customerType, int $birthDate = 0): Customer
     {
+        $age = date('Y') - $birthDate;
+
         if ($customerType === self::GENTLE)
         {
-            return new GentleCustomer();
+            return new GentleCustomer($age);
         }   
         
         if($customerType === self::CHAOTIC)
         {
-            return new ChaoticCustomer();
+            return new ChaoticCustomer($age);
         }   
         
-        return new Customer();
+        return new Customer($age);
     }
 }
