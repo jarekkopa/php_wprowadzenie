@@ -29,3 +29,5 @@ $rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
 
 $customerStatus = new GentleCustomer();
 echo $customerStatus->status;
+
+echo $customer->age;

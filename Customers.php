@@ -33,4 +33,10 @@ class Customer
     {
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
+
+    public $age;
+    public function __construct($age = '31')
+    {
+        $this->age = $age;
+    }
 }
