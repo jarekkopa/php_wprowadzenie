@@ -1,7 +1,9 @@
 <?php
 
 declare (strict_types = 1);
-
+/**
+ * model faktury VAT
+ */
 class Invoice
 {
     /**
@@ -14,12 +16,12 @@ class Invoice
     /**
      * Data wystawienia
      * 
-     * @var string
+     * @var DateTime
      */
     public $date;
 
     /**
-     * Dane nabywcy
+     * Klient dla którego wystawiamy fakturę
      * 
      * @var Customer
      */
