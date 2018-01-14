@@ -4,6 +4,7 @@ declare(strict_types=1);
 class Customer 
 {
     protected $name;
+    public $age;
     /**
      * Status danego Klienta (może być basic lu premium)
      * 
@@ -34,8 +35,7 @@ class Customer
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
 
-    public $age;
-    public function __construct($age = '31')
+    public function __construct($age = '')
     {
         $this->age = $age;
     }
