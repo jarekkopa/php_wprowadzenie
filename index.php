@@ -28,6 +28,14 @@ ChaoticCustomer::getClassName();
 $rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
 
 $customerStatus = new GentleCustomer();
-echo $customerStatus->status;
+echo $customerStatus->status, PHP_EOL;
 
-echo $customer->age;
+$customerAge = new Customer(3);
+$customerAgeGengle = new GentleCustomer(4);
+$customerAgeChaotic = new ChaoticCustomer(5);
+echo 'Wiek: '. $customerAge->age, PHP_EOL;
+echo 'Wiek: '. $customerAgeGengle->age, PHP_EOL;
+echo 'Wiek: '. $customerAgeChaotic->age, PHP_EOL;
+var_export($customerAge);
+var_export($customerAgeGengle);
+var_export($customerAgeChaotic);
