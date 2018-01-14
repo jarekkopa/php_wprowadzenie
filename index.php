@@ -26,3 +26,6 @@ GentleCustomer::getClassName();
 ChaoticCustomer::getClassName();
 
 $rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
+
+$customerStatus = new GentleCustomer();
+echo $customerStatus->status;
