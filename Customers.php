@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 //nazwa klasy z wielkiej
-class Customer 
+class Customer
 {
     protected $name;
     public $age;
@@ -38,5 +38,10 @@ class Customer
     public static function getClassName(): void
     {
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
+    }
+
+    public function askForInvoice(int $invoiceId)
+    {
+        echo 'Wystawiono fakturę?';
     }
 }
