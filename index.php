@@ -25,7 +25,7 @@ Customer::getClassName();
 GentleCustomer::getClassName();
 ChaoticCustomer::getClassName();
 
-$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
+$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE, 1969);
 
 $customerStatus = new GentleCustomer();
 echo $customerStatus->status, PHP_EOL;
@@ -39,3 +39,5 @@ echo 'Wiek: '. $customerAgeChaotic->age, PHP_EOL;
 var_export($customerAge);
 var_export($customerAgeGengle);
 var_export($customerAgeChaotic);
+
+var_export($rudolf);
