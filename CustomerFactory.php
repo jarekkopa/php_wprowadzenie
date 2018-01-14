@@ -12,7 +12,7 @@ class CustomerFactory
 
     public static function chooseCustomer(string $customerType, int $birthDate = 0): Customer
     {
-        $age = date('Y') - $birthDate;
+        $age = $birthDate ? date('Y') - $birthDate : 0;
 
         if ($customerType === self::GENTLE)
         {
