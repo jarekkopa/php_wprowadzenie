@@ -44,8 +44,8 @@ var_export($customerAgeChaotic);
 
 var_export($rudolf);
 
-$rudolf->askForRenew(1000);
-var_export($rudolf);
+// $rudolf->askForRenew(1000);
+// var_export($rudolf);
 
 $invoice = $rudolf->askForInvoice(12345);
 var_export($invoice);

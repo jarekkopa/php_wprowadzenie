@@ -45,6 +45,7 @@ class Customer
         $invoice = new Invoice();
         $invoice->id = $invoiceId;
         //$invoice->setCustomer($this);
+        return $invoice;
     }
 
     /**
