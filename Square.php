@@ -9,9 +9,12 @@ class Square extends Rectangle
     public function setHeight(int $height) //pamietać o ustawieniu dla setterów parametru wraz z typem 
     {
         $this->height = $height;
+        $this->width = $height;
     }
-    public function calculateArea()
+
+    public function setWidth(int $width) //pamietać o ustawieniu dla setterów parametru wraz z typem 
     {
-        return $this->height * $this->height;
+        $this->height = $width;
+        $this->width = $width;
     }
 }
