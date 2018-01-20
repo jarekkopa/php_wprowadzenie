@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once 'Rectangle.php';
 require_once 'Square.php';
+require_once 'AreaCalculableInterface.php';
 
 $rectangle = new Rectangle();
 $rectangle->setWidth(3); //ustawiam z zewnątrz wartośc spoza klasy
