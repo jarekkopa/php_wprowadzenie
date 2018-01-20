@@ -7,23 +7,23 @@ class Rectangle
     private $height;
     private $width;
     
-    public function setHeight()
+    public function setHeight(int $height) //pamietać o ustawieniu dla setterów parametru wraz z typem 
     {
         $this->height = $height;
     }
-    public function setWidth()
+    public function setWidth(int $width)//pamietać o ustawieniu dla setterów parametru wraz z typem 
     {
         $this->width = $width;
     }
-    public function getHeight()
+    public function getHeight()//gettery nie potrzebują parametrów w nawiasie bo zmienna jest w getterze
     {
         return $this->height;
     }
-    public function getWidth()
+    public function getWidth()//gettery nie potrzebują parametrów w nawiasie bo zmienna jest w getterze
     {
         return $this->width;
     }
-    public function calculateArea(int $width, int $height)
+    public function calculateArea()
     {
         return $this->height * $this->width;
     }
