@@ -23,8 +23,4 @@ class Rectangle
     {
         return $this->width;
     }
-    public function calculateArea()
-    {
-        return $this->height * $this->width;
-    }
 }

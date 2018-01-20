@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 require_once 'Rectangle.php';
 
-class Square extends Rectangle
+class Square
 {
-    public function setHeight(int $height) //pamietać o ustawieniu dla setterów parametru wraz z typem 
+    public $lenght;
+
+    public function setHeight(int $lenght) //pamietać o ustawieniu dla setterów parametru wraz z typem 
     {
-        $this->height = $height;
-        $this->width = $height;
+        $this->lenght = $lenght;
     }
 
-    public function setWidth(int $width) //pamietać o ustawieniu dla setterów parametru wraz z typem 
+    public function getHeight()//gettery nie potrzebują parametrów w nawiasie bo zmienna jest w getterze
     {
-        $this->height = $width;
-        $this->width = $width;
+        return $this->lenght;
     }
 }
