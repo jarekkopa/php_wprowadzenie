@@ -12,9 +12,12 @@ class Square  implements AreaCalculableInterface
     {
         $this->lenght = $lenght;
     }
-
     public function getLenght()//gettery nie potrzebują parametrów w nawiasie bo zmienna jest w getterze
     {
         return $this->lenght;
+    }
+    public function calcArea()
+    {
+        return $this->lenght * $this->lenght;
     }
 }

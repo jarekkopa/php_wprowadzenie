@@ -23,4 +23,9 @@ class Rectangle implements AreaCalculableInterface
     {
         return $this->width;
     }
+
+    public function calcArea()
+    {
+        return $this->height * $this->width;
+    }
 }
