@@ -10,28 +10,30 @@ use Monolog\Handler\StreamHandler;
 trait PowerTrait
 {
     protected $power;
-    
+
     public function powerOff()
     {
         $this->power = "off";
 
-        public function generate()
-        {
-                    // create a log channel
-$log = new Logger('name');
-$log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
-
-// add records to the log
-$log->warning('Foo');
-$log->error('Bar');
-        }
+        // create a log channel
+        $log = new Logger('name');
+        $log->pushHandler(new StreamHandler('logs/logs.log', Logger::WARNING));
+        // add records to the log
+        $log->warning("Uwaga, wylaczasz urzadzenie power OFF" . PHP_EOL);
 
         return "Urządzenia wyłączono. Nadano status: " . $this->power;
+
     }
-    
     public function powerOn()
     {
         $this->power = "on";
+
+        // create a log channel
+        $log = new Logger('name');
+        $log->pushHandler(new StreamHandler('logs/logs.log', Logger::WARNING));
+        // add records to the log
+        $log->warning('Foo');
+        $log->error('Bar');
         return "Urządzenia włączono. Nadano status: " . $this->power;
     }
 }
