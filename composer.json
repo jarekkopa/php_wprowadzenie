@@ -7,7 +7,9 @@
             "email": "jarek.kopa@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.10"
+    },
     "autoload": {
         "psr-4": {"Jaro\\": "src/Jaro"}
     }

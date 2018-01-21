@@ -6,5 +6,4 @@ namespace Jaro;
 
 class KeyCar extends AbstractCar
 {
-    
 }
