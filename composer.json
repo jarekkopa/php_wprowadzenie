@@ -1,0 +1,14 @@
+{
+    "name": "jaro/pierwszy",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jarek",
+            "email": "jarek.kopa@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Jaro\\": "src/Jaro"}
+    }
+}
