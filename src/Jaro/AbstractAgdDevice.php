@@ -6,5 +6,4 @@ namespace Jaro;
 
 abstract class AbstractAgdDevice
 {
-    
 }
