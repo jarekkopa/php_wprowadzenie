@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-abstract class AbstractRtvDevice
+class ButtonCar extends AbstractCar
 {
     
 }

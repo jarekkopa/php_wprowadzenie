@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Tv
+class KeyCar extends AbstractCar
 {
     
 }

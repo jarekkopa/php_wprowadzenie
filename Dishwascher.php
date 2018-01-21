@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Dishwasher
+class Dishwasher extends AbstractAgdDevice
 {
-    
+
 }

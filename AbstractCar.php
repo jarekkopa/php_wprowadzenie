@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Fridge extends AbstractAgdDevice
+abstract class AbstractCar
 {
     
 }
