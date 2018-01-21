@@ -10,6 +10,6 @@ require_once 'Fridge.php';
 require_once 'ButtonCar.php';
 require_once 'KeyCar.php';
 
-$dishwasher = new Dishwasher();
+$dishwasher = new Jaro\Dishwasher();
 echo $dishwasher->powerOn(), PHP_EOL;
 echo $dishwasher->powerOff();
