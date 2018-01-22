@@ -32,8 +32,8 @@ trait PowerTrait
         $log = new Logger('name');
         $log->pushHandler(new StreamHandler('logs/logs.log', Logger::WARNING));
         // add records to the log
-        $log->warning('Foo');
-        $log->error('Bar');
+        $log->warning('Informacja o Ostrzeżeniach');
+        $log->error('Informacja o Błędach');
         return "Urządzenia włączono. Nadano status: " . $this->power;
     }
 }
