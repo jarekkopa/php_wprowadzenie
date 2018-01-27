@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+$config = yaml_parse_file('config.yml');
+var_export($config);
+exit;
+
 // 1. Tworzy pojedynczy plik
 // $poster = file_get_contents('https://upload.wikimedia.org/wikipedia/en/4/4f/The_Hobbit_-_The_Desolation_of_Smaug_theatrical_poster.jpg');
 
