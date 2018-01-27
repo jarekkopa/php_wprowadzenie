@@ -9,27 +9,27 @@ declare(strict_types=1);
 
 // 2. pobieramy plakaty
 
+$titles = ['Piraci z Karaibow', 'Ring', 'Blade Runner 2049', 'Thor', 'Get Out', 'Star Wars Last Jedi', 'Okja', 'London', 'Tarzan', 'The Founder', 'Kapitan Ameryka Civil War', 'Spectre'];
+
 $log1 = 'Rozpoczęcie pobierania: ';
 $log2 = 'Zakoczenie pobierania: ';
 $date = date('Y-m-j h:i:s');
 $files = file_get_contents('https://cytaty.eu/img/sda/posters/');
 $matches = [];
 preg_match_all('/href="([0-9]+)\.jpg"/', $files, $matches);
-var_export($matches[1]);
-exit;
+$remoteFileNames = ($matches[1]);
 
-$titles = ['Piraci z Karaibow', 'Ring', 'Blade Runner 2049', 'Thor', 'Get Out', 'Star Wars Last Jedi', 'Okja', 'London', 'Tarzan', 'The Founder', 'Kapitan Ameryka Civil War', 'Spectre'];
-
-for ($i=1; $i < 13; $i++)
+foreach ($remoteFileNames as $remoteFileName)
 {
     // $name - nazwa pod jaką jest zapisyany plik; $img - wskazuje jaki plik jest zapisywany
     $imgType = "plakat";
-    $img = file_get_contents("https://cytaty.eu/img/sda/posters/". $i . ".jpg");
-    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
-    $name = str_ireplace(' ', '-', strtolower($titles[$i-1]));
+    $img = file_get_contents("https://cytaty.eu/img/sda/posters/". $remoteFileName . ".jpg");
+    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$remoteFileName-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
+    $name = str_ireplace(' ', '-', strtolower($titles[$remoteFileName-1]));
     file_put_contents('posters/'.$name.".jpg", $img); 
-    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
+    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$remoteFileName-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
 }
+exit;
 // 3. Pobieramy ujęcia
 for($i = 1; $i < 13; $i++)
 {
