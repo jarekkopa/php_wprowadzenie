@@ -13,7 +13,9 @@ $log1 = 'Rozpoczęcie pobierania: ';
 $log2 = 'Zakoczenie pobierania: ';
 $date = date('Y-m-j h:i:s');
 $files = file_get_contents('https://cytaty.eu/img/sda/posters/');
-var_export($files);
+$matches = [];
+preg_match_all('/href="([0-9]+)\.jpg"/', $files, $matches);
+var_export($matches[1]);
 exit;
 
 $titles = ['Piraci z Karaibow', 'Ring', 'Blade Runner 2049', 'Thor', 'Get Out', 'Star Wars Last Jedi', 'Okja', 'London', 'Tarzan', 'The Founder', 'Kapitan Ameryka Civil War', 'Spectre'];
