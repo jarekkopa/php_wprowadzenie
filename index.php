@@ -21,7 +21,7 @@ for ($i=1; $i < 13; $i++)
     $imgType = "plakat";
     $img = file_get_contents("https://cytaty.eu/img/sda/posters/". $i . ".jpg");
     file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
-    $name = str_ireplace(' ', '_', strtolower($titles[$i-1]));
+    $name = str_ireplace(' ', '-', strtolower($titles[$i-1]));
     file_put_contents('posters/'.$name.".jpg", $img); 
     file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
 }
@@ -31,7 +31,7 @@ for($i = 1; $i < 13; $i++)
     $imgType = 'Shot';
     $img = file_get_contents("https://cytaty.eu/img/sda/shots/".$i.".jpg");
     file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
-    $name = str_ireplace(' ', '_', strtolower($titles[$i-1]));
+    $name = str_ireplace(' ', '-', strtolower($titles[$i-1]));
     file_put_contents('shots/'.$name.".jpg", $img);
     file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
 }
