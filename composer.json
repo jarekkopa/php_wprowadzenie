@@ -1,0 +1,8 @@
+{
+    "name": "jaro/poster-downloader",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Jaro\\": "src/Jaro"}
+    }
+}
