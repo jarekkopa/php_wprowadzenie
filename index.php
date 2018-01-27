@@ -29,14 +29,18 @@ foreach ($remoteFileNames as $remoteFileName)
     file_put_contents('posters/'.$name.".jpg", $img); 
     file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$remoteFileName-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
 }
-exit;
-// 3. Pobieramy ujęcia
-for($i = 1; $i < 13; $i++)
+$files2 = file_get_contents('https://cytaty.eu/img/sda/shots/');
+$matches2 = [];
+preg_match_all('/href="([0-9]+)\.jpg"/', $files2, $matches2);
+$remoteFileNames2 = ($matches2[1]);
+
+foreach ($remoteFileNames2 as $remoteFileName)
 {
-    $imgType = 'Shot';
-    $img = file_get_contents("https://cytaty.eu/img/sda/shots/".$i.".jpg");
-    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
-    $name = str_ireplace(' ', '-', strtolower($titles[$i-1]));
-    file_put_contents('shots/'.$name.".jpg", $img);
-    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$i-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
+    // $name - nazwa pod jaką jest zapisyany plik; $img - wskazuje jaki plik jest zapisywany
+    $imgType = "shot";
+    $img = file_get_contents("https://cytaty.eu/img/sda/shots/". $remoteFileName . ".jpg");
+    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log1. $titles[$remoteFileName-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
+    $name = str_ireplace(' ', '-', strtolower($titles[$remoteFileName-1]));
+    file_put_contents('shots/'.$name.".jpg", $img); 
+    file_put_contents('logs/filmoteka.log', " Data: ".$date." - ".$log2. $titles[$remoteFileName-1]." - ".$imgType.PHP_EOL,FILE_APPEND);
 }
