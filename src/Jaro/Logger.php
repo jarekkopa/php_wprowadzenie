@@ -3,13 +3,18 @@
 declare(strict_types=1);
 
 namespace Jaro;
-
+/**
+ * Klasa Logger zapisuje logi do pliku filmoteka.log.
+ */
 class Logger
 {
-    public function saveToLogs($log = 'test')
+    /**
+     * Metoda saveToLogs zapisująca logi do pliku.
+     * 
+     * @param string $log Przechowuje treść logu przekazywanego do metody.
+     */
+    public function saveToLogs(string $log)
     {
-        file_put_contents('logs/filmoteka.log', date('Y-m-j h:i:s') . " " . $log . PHP_EOL,FILE_APPEND);
+        file_put_contents(Config::LOG_FILE, date('Y-m-j h:i:s') . " " . $log . PHP_EOL,FILE_APPEND);
     }
 }
-// $loog = new Logger();
-// echo $loog->saveToLogs();
